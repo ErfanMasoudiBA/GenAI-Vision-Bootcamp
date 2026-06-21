@@ -33,14 +33,7 @@ The program consists of over 200 hours of specialized training. Here is the brea
 
 ## 📂 Repository Structure
 
-_(You can update this section as you upload your folders)_
-
-- `01-Python/`
-- `02-Machine-Learning/`
-- `03-Deep-Learning/`
-- `04-Computer-Vision/`
-- `05-Generative-AI/`
-- `Projects/`: _Final and mid-term applied projects._
+- `01_python_programming/`
 
 ## 🛠️ Tech Stack & Tools
 
