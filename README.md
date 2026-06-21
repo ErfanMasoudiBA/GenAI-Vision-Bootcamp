@@ -1,5 +1,7 @@
 # GenAI Vision Bootcamp 👁️✨
 
+🚧 [Work in Progress] - I am currently updating this repository weekly as I progress through the bootcamp.
+
 Welcome to my repository for the **Generative AI & Computer Vision Bootcamp** at Hamrah Academy. This intensive 12-week program focuses on modern AI technologies, specifically in the visual domain, covering everything from core mathematics to advanced Generative AI and Multimodal models.
 
 ## 🚀 About This Repository
