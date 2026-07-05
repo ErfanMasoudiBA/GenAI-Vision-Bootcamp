@@ -1,0 +1,345 @@
+\typeout{=== COMPILING report.tex (FULL REDESIGN V3) ===}
+
+\documentclass[12pt, a4paper]{article}
+
+\usepackage{tikz}
+\usetikzlibrary{calc, shadings}
+\usepackage{shadow}
+\usepackage{fontawesome5}
+\usepackage{fancyhdr}
+\usepackage{eso-pic} 
+\usepackage[a4paper,margin=2.5cm,headheight=1.2cm,headsep=0.8cm]{geometry}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins, breakable}
+\usepackage{graphicx}
+\usepackage{titletoc}
+\usepackage{hyperref}
+\usepackage{xepersian}   
+
+\settextfont[Scale=1.1]{Vazirmatn}
+\setdigitfont{Vazirmatn}
+
+% --- تعریف پالت رنگی هماهنگ با همراه اول ---
+\definecolor{primary}{HTML}{1F3A5F}   % سرمه‌ای عمیق
+\definecolor{MCIblue}{HTML}{009FE3}   % آبی همراه اول
+\definecolor{MCIorange}{HTML}{F26F21} % نارنجی همراه اول
+\definecolor{textgray}{HTML}{2B2B2B}  % متن بدنه
+\definecolor{lightbg}{HTML}{F8F9FA}   % پس‌زمینه ملایم باکس‌ها
+\definecolor{rulegray}{HTML}{E2E8F0}  % خطوط هادی ملایم
+
+\definecolor{clrBlue}{RGB}{31,97,141}
+\definecolor{clrGreen}{RGB}{30,132,73}
+\definecolor{clrPurple}{RGB}{118,68,138}
+\definecolor{clrOrange}{RGB}{202,89,23}
+
+\hypersetup{
+    colorlinks    = true,
+    linkcolor     = clrBlue,
+    pdftitle      = {گزارش کارگاه بینایی ماشین},
+    bookmarksopen = true,
+    unicode       = true
+}
+
+% --- بازطراحی باکس گام‌ها (مدرن، با حاشیه سمت راست رنگی و سایه ملایم) ---
+% --- بازطراحی باکس گام‌ها (ساده و بدون تکرار عنوان) ---
+\newtcolorbox{stepbox}{
+    breakable,
+    enhanced,
+    colback      = lightbg,
+    colframe     = MCIblue,
+    boxrule      = 0pt,
+    rightrule    = 4pt,          % نوار رنگی سمت راست
+    arc          = 3mm,
+    top=16pt, bottom=16pt, left=16pt, right=16pt,
+    fontupper    = \linespread{1.6}\selectfont\color{textgray},
+    shadow       = {0mm}{-1mm}{2mm}{gray!10}, % سایه بسیار ملایم زیر باکس
+    parbox       = false
+}
+
+
+% --- استایل اختصاصی برای فیلدها درون باکس ---
+\newcommand{\field}[2]{%
+    \noindent\textbf{\textcolor{primary}{\faChevronLeft\ #1}}\\[0.15cm]
+    #2\par\vspace{0.6cm}
+}
+
+% --- تنظیمات هدر و فوتر صفحات داخلی (سازگار با هویت بصری جدید) ---
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\includegraphics[height=0.8cm]{logo.png}}
+\fancyhead[L]{\small\color{textgray!70}\faLaptopCode\ از پردازش پیکسل تا هوش بصری عمیق}
+\fancyfoot[C]{\thepage}
+
+% خط دو رنگ زیر هدر برای هارمونی با صفحه اول
+\renewcommand{\headrule}{%
+    \vspace{-4pt}
+    \color{MCIblue}\hrule height 1.5pt width \headwidth
+    \vspace{1pt}
+    \color{MCIorange}\hrule height 0.5pt width \headwidth
+}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\begin{document}
+
+%----------------------------------------
+%          TITLE PAGE (RE-DESIGNED V3)
+%----------------------------------------
+\begin{titlepage}
+\newgeometry{left=2cm,right=2cm,top=0cm,bottom=1.5cm}
+
+\begin{tikzpicture}[remember picture,overlay]
+    \fill[MCIorange] ([xshift=-8cm]current page.north east) -- (current page.north east) -- ([yshift=-4cm]current page.north east) -- cycle;
+    \fill[MCIblue] ([xshift=-7.5cm]current page.north east) -- (current page.north east) -- ([yshift=-3.5cm]current page.north east) -- cycle;
+    \fill[MCIblue] (current page.south west) rectangle ([yshift=0.3cm]current page.south east);
+    \fill[MCIorange] (current page.south west) rectangle ([yshift=0.1cm]current page.south east);
+\end{tikzpicture}
+
+\vspace*{1.2cm}
+\begin{center}
+    \begin{minipage}{0.9\textwidth}
+        \begin{flushleft}
+            \includegraphics[width=4.2cm]{logo.png} 
+        \end{flushleft}
+    \end{minipage}
+\end{center}
+
+\vspace{2.2cm}
+
+\begin{center}
+    \setLTR
+    \textcolor{gray!80}{\large\textsf{Final Project Report}} \vspace{0.4cm}
+    \setRTL
+    
+    \begin{minipage}{0.8\textwidth}
+        \centering
+        {\fontsize{26}{34}\selectfont\bfseries\color[HTML]{009FE3} مراحل طراحی و توسعه}\\[0.3cm]
+        {\fontsize{26}{34}\selectfont\bfseries\color[HTML]{1F3A5F} یک سیستم بینایی ماشین}
+    \end{minipage}
+    
+    \vspace{0.6cm}
+    \textcolor{MCIorange}{\rule{8cm}{2pt}}
+    \vspace{0.6cm}
+    
+    {\large\color{textgray} دوره آموزشی: از پردازش پیکسل تا هوش بصری عمیق} \\[0.2cm]
+    {\large\color{textgray} تاریخ گزارش: ۲۸ خرداد تا ۱۶ تیر ۱۴۰۴}
+    
+    \vspace{1.5cm}
+    \begin{minipage}{0.6\textwidth}
+        \centering
+        \large
+        \faUser\ \textbf{مدرس:} جناب آقای محسن دارچینی تبریزی \\[0.4cm]
+        \faUserGraduate\ \textbf{نگارنده:} سیدعرفان مسعودی
+    \end{minipage}
+\end{center}
+
+\vfill
+
+\begin{tcolorbox}[
+    enhanced,
+    colback=lightbg,
+    colframe=rulegray,
+    arc=3mm,
+    boxrule=0.5pt,
+    left=10pt, right=10pt, top=12pt, bottom=12pt
+]
+    \centering
+    \small
+    \begin{tabular}{ccc}
+        \faEnvelope\ \texttt{erfanmasoudiba@gmail.com} & 
+        \faTelegram\ @erfanmasoudiba \\ [0.3cm]
+        \faGithub\ github.com/ErfanMasoudiBA & 
+        \faLinkedin\ linkedin.com/in/erfan-masoudi
+    \end{tabular}
+\end{tcolorbox}
+
+\vspace{0.8cm}
+
+\end{titlepage}
+\restoregeometry
+%----------------------------------------
+
+\newpage
+\tableofcontents
+\newpage
+
+% ======== گام ۱ ========
+\section[گام اول: تعریف مسئله]{\faSlidersH\ \ گام اول: تعریف مسئله}
+\begin{stepbox}
+
+\field{مشکل/نیاز اصلی}{متن شما اینجا}
+
+\field{چرا بینایی ماشین مناسب است}{متن شما اینجا}
+
+\field{هدف نهایی و خروجی مورد انتظار}{متن شما اینجا}
+
+\end{stepbox}
+
+% ======== گام ۲ ========
+\newpage
+\section[گام دوم: تحلیل نیازمندی‌ها]{\faList\ \ گام دوم: تحلیل نیازمندی‌ها}
+\begin{stepbox}
+
+\field{کاربران و ذینفعان}{متن شما اینجا}
+
+\field{محدودیت‌ها}{متن شما اینجا}
+
+\field{دسترسی به منابع}{متن شما اینجا}
+
+\end{stepbox}
+
+% ======== گام ۳ ========
+\newpage
+\section[گام سوم: جمع‌آوری داده]{\faDatabase\ \ گام سوم: جمع‌آوری داده}
+\begin{stepbox}
+
+\field{نوع داده مورد نیاز}{متن شما اینجا}
+
+\field{منابع داده}{متن شما اینجا}
+
+\field{ملاحظات حریم خصوصی}{متن شما اینجا}
+
+\end{stepbox}
+
+% ======== گام ۴ ========
+\newpage
+\section[گام چهارم: طراحی و برچسب‌گذاری داده]{\faTags\ \ گام چهارم: طراحی و برچسب‌گذاری داده}
+\begin{stepbox}
+
+\field{سازماندهی و ساختار داده}{متن شما اینجا}
+
+\field{فرآیند برچسب‌گذاری}{متن شما اینجا}
+
+\field{تضمین کیفیت و تنوع}{متن شما اینجا}
+
+\end{stepbox}
+
+% ======== گام ۵ ========
+\newpage
+\section[گام پنجم: پیش‌پردازش داده]{\faFilter\ \ گام پنجم: پیش‌پردازش داده}
+\begin{stepbox}
+
+\field{پاک‌سازی و نرمال‌سازی}{متن شما اینجا}
+
+\field{تقسیم داده}{متن شما اینجا}
+
+\end{stepbox}
+
+% ======== گام ششم ========
+\newpage
+\section[گام ششم: انتخاب رویکرد و مدل]{\faBrain\ \ گام ششم: انتخاب رویکرد و مدل}
+\begin{stepbox}
+
+\field{رویکرد کلاسیک یا یادگیری عمیق}{متن شما اینجا}
+
+\field{انتخاب الگوریتم/معماری}{متن شما اینجا}
+
+\field{مدل پیش‌آموزش یا سفارشی}{متن شما اینجا}
+
+\end{stepbox}
+
+% ======== گام هفتم ========
+\newpage
+\section[گام هفتم: آموزش مدل]{\faCog\ \ گام هفتم: آموزش مدل}
+\begin{stepbox}
+
+\field{تنظیم هایپرپارامترها}{متن شما اینجا}
+
+\field{آموزش روی داده‌های train}{متن شما اینجا}
+
+\field{پایش و جلوگیری از overfitting}{متن شما اینجا}
+
+\end{stepbox}
+
+% ======== گام هشتم ========
+\newpage
+\section[گام هشتم: ارزیابی مدل]{\faChartLine\ \ گام هشتم: ارزیابی مدل}
+\begin{stepbox}
+
+\field{ارزیابی روی validation/test}{متن شما اینجا}
+
+\field{معیارهای ارزیابی}{
+    از معیارهای \lr{Accuracy}، \lr{Precision}، \lr{Recall} و \lr{F1-Score} 
+    برای ارزیابی استفاده می‌شود.
+}
+
+\field{تحلیل نقاط قوت و ضعف}{متن شما اینجا}
+
+\end{stepbox}
+
+% ======== گام نهم ========
+\newpage
+\section[گام نهم: بهبود و بهینه‌سازی]{\faWrench\ \ گام نهم: بهبود و بهینه‌سازی}
+\begin{stepbox}
+
+\field{بهبود کیفیت داده}{متن شما اینجا}
+
+\field{تنظیم مدل/هایپرپارامترها}{متن شما اینجا}
+
+\field{افزایش داده و regularization}{متن شما اینجا}
+
+\end{stepbox}
+
+% ======== گام دهم ========
+\newpage
+\section[گام دهم: اعتبارسنجی نهایی]{\faTasks\ \ گام دهم: اعتبارسنجی نهایی}
+\begin{stepbox}
+
+\field{عملکرد در دنیای واقعی}{متن شما اینجا}
+
+\field{تست روی داده/سناریوهای ندیده}{متن شما اینجا}
+
+\field{بررسی خطاهای حیاتی/ریسک‌ها}{متن شما اینجا}
+
+\end{stepbox}
+
+% ======== گام یازدهم ========
+\newpage
+\section[گام یازدهم: استقرار سیستم]{\faUpload\ \ گام یازدهم: استقرار سیستم}
+\begin{stepbox}
+
+\field{بستر استقرار}{متن شما اینجا}
+
+\field{یکپارچه‌سازی و رابط کاربری/API}{متن شما اینجا}
+
+\end{stepbox}
+
+% ======== گام دوازدهم ========
+\newpage
+\section[گام دوازدهم: پایش و مانیتورینگ]{\faChartArea\ \ گام دوازدهم: پایش و مانیتورینگ}
+\begin{stepbox}
+
+\field{پایش عملکرد در دنیای واقعی}{متن شما اینجا}
+
+\field{ردیابی کیفیت ورودی، خطاها و هشدارها}{متن شما اینجا}
+
+\end{stepbox}
+
+% ======== گام سیزدهم ========
+\newpage
+\section[گام سیزدهم: بازآموزی و به‌روزرسانی]{\faSync\ \ گام سیزدهم: بازآموزی و به‌روزرسانی}
+\begin{stepbox}
+
+\field{زمان بازآموزی}{متن شما اینجا}
+
+\field{به‌روزرسانی داده/نسخه‌های مدل}{متن شما اینجا}
+
+\field{مدیریت نسخه‌ها}{متن شما اینجا}
+
+\end{stepbox}
+
+% ======== گام چهاردهم ========
+\newpage
+\section[گام چهاردهم: ملاحظات اخلاقی و قانونی]{\faBalanceScale\ \ گام چهاردهم: ملاحظات اخلاقی و قانونی}
+\begin{stepbox}
+
+\field{حریم خصوصی، امنیت، شفافیت}{متن شما اینجا}
+
+\field{کاهش تعصب}{متن شما اینجا}
+
+\field{مسئولیت‌پذیری و تأثیر اجتماعی}{متن شما اینجا}
+
+\end{stepbox}
+
+\end{document}
+

@@ -1,0 +1,15 @@
+\contentsline {section}{\numberline {1}گام اول: تعریف مسئله}{2}{section.1}%
+\contentsline {section}{\numberline {2}گام دوم: تحلیل نیازمندی‌ها}{3}{section.2}%
+\contentsline {section}{\numberline {3}گام سوم: جمع‌آوری داده}{4}{section.3}%
+\contentsline {section}{\numberline {4}گام چهارم: طراحی و برچسب‌گذاری داده}{5}{section.4}%
+\contentsline {section}{\numberline {5}گام پنجم: پیش‌پردازش داده}{6}{section.5}%
+\contentsline {section}{\numberline {6}گام ششم: انتخاب رویکرد و مدل}{7}{section.6}%
+\contentsline {section}{\numberline {7}گام هفتم: آموزش مدل}{8}{section.7}%
+\contentsline {section}{\numberline {8}گام هشتم: ارزیابی مدل}{9}{section.8}%
+\contentsline {section}{\numberline {9}گام نهم: بهبود و بهینه‌سازی}{10}{section.9}%
+\contentsline {section}{\numberline {10}گام دهم: اعتبارسنجی نهایی}{11}{section.10}%
+\contentsline {section}{\numberline {11}گام یازدهم: استقرار سیستم}{12}{section.11}%
+\contentsline {section}{\numberline {12}گام دوازدهم: پایش و مانیتورینگ}{13}{section.12}%
+\contentsline {section}{\numberline {13}گام سیزدهم: بازآموزی و به‌روزرسانی}{14}{section.13}%
+\contentsline {section}{\numberline {14}گام چهاردهم: ملاحظات اخلاقی و قانونی}{15}{section.14}%
+\contentsfinish 
