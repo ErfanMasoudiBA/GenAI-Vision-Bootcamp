@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.17)  5 JUL 2026 22:47
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.17)  6 JUL 2026 18:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1205,7 +1205,19 @@ File: logo.png Graphic file (type bmp)
 <logo.png>
 [1
 
-] (steps/step01.tex)
+] (steps/step01.tex
+Overfull \hbox (5.40761pt too wide) in paragraph at lines 15--15
+[][]\TU/lmroman10-regular(0)/m/n/12 Scan[] \TU/Vazirmatn(0)/m/n/12 است. خروجی م
+ورد انتظار این سیستم، تولید ماسک‌های دقیق پیکسل‌به‌پیکسل[]
+ []
+
+File: images/Liver-tumor-segmentation-results-of-different-methods-on-the-LiTS-
+validation-dataset.png Graphic file (type bmp)
+<images/Liver-tumor-segmentation-results-of-different-methods-on-the-LiTS-valid
+ation-dataset.png>
+LaTeX Font Info:    Font shape `TU/Vazirmatn(0)/m/n' will be
+(Font)              scaled to size 11.00006pt on input line 20.
+
 \endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
 e
 [][][][] 
@@ -1213,13 +1225,23 @@ e
 
 File: logo.png Graphic file (type bmp)
 <logo.png>
-[2] (steps/step02.tex
+[2])
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+File: logo.png Graphic file (type bmp)
+<logo.png>
+[3] (steps/step02.tex
 Overfull \hbox (4.51965pt too wide) in paragraph at lines 7--7
 []\TU/Vazirmatn(0)/m/n/12 تومورها، کاهش خطای انسانی و جلوگیری از تشخیص‌های مثبت
  کاذب منتفع خواهند[]
  []
 
-)
+File: images/graph.jpg Graphic file (type bmp)
+<images/graph.jpg>
+
 \endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
 e
 [][][][] 
@@ -1227,19 +1249,7 @@ e
 
 File: logo.png Graphic file (type bmp)
 <logo.png>
-[3] (steps/step03.tex
-Overfull \hbox (4.49052pt too wide) in paragraph at lines 7--7
-[]\TU/Vazirmatn(0)/m/n/12 حجم‌های سه‌بعدی و در قالب فرمت NIfTI (\TU/lmtt/m/n/12
- .nii\TU/Vazirmatn(0)/m/n/12 ) برای ورود به مدل پردازش می‌شوند.[]
- []
-
-
-Overfull \hbox (18.984pt too wide) in paragraph at lines 11--11
-[]\TU/Vazirmatn(0)/m/n/12 مانند LiTS (Liver Tumor Segmentation Benchmark) است ک
-ه از طریق پلتفرم‌هایی[]
- []
-
-)
+[4])
 \endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
 e
 [][][][] 
@@ -1247,37 +1257,33 @@ e
 
 File: logo.png Graphic file (type bmp)
 <logo.png>
-[4] (steps/step04.tex
-Overfull \hbox (1.03369pt too wide) in paragraph at lines 7--7
-[]\TU/Vazirmatn(0)/m/n/12 تصاویر سه‌بعدی CT Scan به‌عنوان ورودی سامانه سازمان‌د
-هی می‌شوند و خروجی‌ها[]
+[5] (steps/step03.tex
+File: images/dicom.png Graphic file (type bmp)
+<images/dicom.png>
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
  []
 
+File: logo.png Graphic file (type bmp)
+<logo.png>
+[6])
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
 
+File: logo.png Graphic file (type bmp)
+<logo.png>
+[7] (steps/step04.tex
 Overfull \hbox (5.22221pt too wide) in paragraph at lines 15--15
 []\TU/Vazirmatn(0)/m/n/12 اسکنرهای مختلف جمع‌آوری می‌شوند تا مدل در مواجهه با ش
 رایط متنوع تصویربرداری،[]
  []
 
-)
-\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
-e
-[][][][] 
- []
-
-File: logo.png Graphic file (type bmp)
-<logo.png>
-[5] (steps/step05.tex)
-\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
-e
-[][][][] 
- []
-
-File: logo.png Graphic file (type bmp)
-<logo.png>
-[6] (steps/step06.tex
-File: images/unetpp.jpg Graphic file (type bmp)
-<images/unetpp.jpg>
+File: images/3d-slicer.png Graphic file (type bmp)
+<images/3d-slicer.png>
 
 \endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
 e
@@ -1286,7 +1292,7 @@ e
 
 File: logo.png Graphic file (type bmp)
 <logo.png>
-[7])
+[8])
 \endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
 e
 [][][][] 
@@ -1294,14 +1300,81 @@ e
 
 File: logo.png Graphic file (type bmp)
 <logo.png>
-[8] (steps/step07.tex
-Overfull \hbox (25.99791pt too wide) in paragraph at lines 19--19
+[9] (steps/step05.tex
+Overfull \hbox (18.01035pt too wide) in paragraph at lines 10--10
+[]\TU/Vazirmatn(0)/m/n/12 بهبود و پایداری فرآیند بهینه‌سازی گرادیان کاهشی ([]\T
+U/lmroman10-regular(0)/m/n/12 Gradient Descent[]\TU/Vazirmatn(0)/m/n/12 )، مقاد
+یر پیکسل‌ها[]
+ []
+
+File: images/fig1a.jpeg Graphic file (type bmp)
+<images/fig1a.jpeg>
+File: images/fig1b.jpeg Graphic file (type bmp)
+<images/fig1b.jpeg>
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+File: logo.png Graphic file (type bmp)
+<logo.png>
+[10])
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+File: logo.png Graphic file (type bmp)
+<logo.png>
+[11] (steps/step06.tex
+Overfull \hbox (1.50679pt too wide) in paragraph at lines 6--6
+[]\TU/Vazirmatn(0)/m/n/12 کلاسیک پردازش تصویر، مانند آستانه‌گذاری ([]\TU/lmroma
+n10-regular(0)/m/n/12 Thresholding[]\TU/Vazirmatn(0)/m/n/12 )، و نیز الگوریتم‌ه
+ای سنتی[]
+ []
+
+File: images/liver-and-tumor-unet-segmentation.png Graphic file (type bmp)
+<images/liver-and-tumor-unet-segmentation.png>
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+File: logo.png Graphic file (type bmp)
+<logo.png>
+[12])
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+File: logo.png Graphic file (type bmp)
+<logo.png>
+[13] (steps/step07.tex
+Overfull \hbox (5.95274pt too wide) in paragraph at lines 15--15
+[][]\TU/lmroman10-regular(0)/m/n/12 caded U-Net[]\TU/Vazirmatn(0)/m/n/12 )، محد
+ودیت حافظه []\TU/lmroman10-regular(0)/m/n/12 GPU[] \TU/Vazirmatn(0)/m/n/12 تعیی
+ن‌کننده است؛ بنابراین []\TU/lmroman10-regular(0)/m/n/12 Batch Size[] \TU/Vazirm
+atn(0)/m/n/12 معمولاً[]
+ []
+
+
+Overfull \hbox (25.99791pt too wide) in paragraph at lines 20--20
 []\TU/Vazirmatn(0)/m/n/12 به دلیل محدود بودن داده‌های برچسب‌خورده پزشکی، افزایش
  داده ([]\TU/lmroman10-regular(0)/m/n/12 Data Augmentation[]\TU/Vazirmatn(0)/m/
 n/12 )[]
  []
 
 
+Overfull \hbox (7.8121pt too wide) in paragraph at lines 20--20
+[]\TU/Vazirmatn(0)/m/n/12 قرینه‌سازی ([]\TU/lmroman10-regular(0)/m/n/12 Flippin
+g[]\TU/Vazirmatn(0)/m/n/12 ) و به‌ویژه []\TU/lmroman10-regular(0)/m/n/12 Elasti
+c Deformation[] \TU/Vazirmatn(0)/m/n/12 (برای شبیه‌سازی تغییرات طبیعی[]
+ []
+
+
 \endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
 e
 [][][][] 
@@ -1309,7 +1382,7 @@ e
 
 File: logo.png Graphic file (type bmp)
 <logo.png>
-[9])
+[14])
 \endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
 e
 [][][][] 
@@ -1317,7 +1390,7 @@ e
 
 File: logo.png Graphic file (type bmp)
 <logo.png>
-[10] (steps/step08.tex
+[15] (steps/step08.tex
 \endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
 e
 [][][][] 
@@ -1325,7 +1398,7 @@ e
 
 File: logo.png Graphic file (type bmp)
 <logo.png>
-[11])
+[16])
 \endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
 e
 [][][][] 
@@ -1333,7 +1406,7 @@ e
 
 File: logo.png Graphic file (type bmp)
 <logo.png>
-[12] (steps/step09.tex)
+[17] (steps/step09.tex)
 \endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
 e
 [][][][] 
@@ -1341,7 +1414,7 @@ e
 
 File: logo.png Graphic file (type bmp)
 <logo.png>
-[13] (steps/step10.tex
+[18] (steps/step10.tex
 Overfull \hbox (5.2179pt too wide) in paragraph at lines 7--7
 []\TU/Vazirmatn(0)/m/n/12 نظیر UNet++، مدل‌های یادگیری عمیق در شرایط کنترل‌شده 
 آزمایشگاهی به دقت‌های[]
@@ -1355,7 +1428,7 @@ e
 
 File: logo.png Graphic file (type bmp)
 <logo.png>
-[14] (steps/step11.tex
+[19] (steps/step11.tex
 Overfull \hbox (11.39258pt too wide) in paragraph at lines 15--15
 []\TU/Vazirmatn(0)/m/n/12 برای ارائه مدل به‌عنوان یک سرویس پایدار، تکرارپذیر و 
 قابل استقرار در شبکه بیمارستان،[]
@@ -1369,7 +1442,7 @@ e
 
 File: logo.png Graphic file (type bmp)
 <logo.png>
-[15])
+[20])
 \endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
 e
 [][][][] 
@@ -1377,7 +1450,7 @@ e
 
 File: logo.png Graphic file (type bmp)
 <logo.png>
-[16] (steps/step12.tex)
+[21] (steps/step12.tex)
 \endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
 e
 [][][][] 
@@ -1385,7 +1458,7 @@ e
 
 File: logo.png Graphic file (type bmp)
 <logo.png>
-[17] (steps/step13.tex
+[22] (steps/step13.tex
 Overfull \hbox (5.20978pt too wide) in paragraph at lines 15--15
 []\TU/Vazirmatn(0)/m/n/12 استفاده از سیستم‌های مدیریت مدل (مانند []\TU/lmroman1
 0-regular(0)/m/n/12 MLflow[]\TU/Vazirmatn(0)/m/n/12 )، هر نسخه شناسنامه و تاریخ
@@ -1400,7 +1473,7 @@ e
 
 File: logo.png Graphic file (type bmp)
 <logo.png>
-[18] (steps/step14.tex
+[23] (steps/step14.tex
 Overfull \hbox (7.47437pt too wide) in paragraph at lines 7--7
 [][]\TU/lmroman10-regular(0)/m/n/12 HIPAA[] \TU/Vazirmatn(0)/m/n/12 و []\TU/lmr
 oman10-regular(0)/m/n/12 GDPR[] \TU/Vazirmatn(0)/m/n/12 مطابقت داشته باشد. فرآی
@@ -1436,7 +1509,7 @@ e
 
 File: logo.png Graphic file (type bmp)
 <logo.png>
-[19] (steps/references.tex)
+[24] (steps/references.tex)
 \endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
 e
 [][][][] 
@@ -1444,7 +1517,7 @@ e
 
 File: logo.png Graphic file (type bmp)
 <logo.png>
-[20] (report.aux)
+[25] (report.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-11-06>
@@ -1457,12 +1530,12 @@ Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: 1BDE2F5C3CEB4724F782E7C6880F94D9;3608.
  ) 
 Here is how much of TeX's memory you used:
- 30375 strings out of 402987
- 654816 string characters out of 5452870
+ 30437 strings out of 402987
+ 657182 string characters out of 5452870
  1119206 words of memory out of 5000000
- 58523 multiletter control sequences out of 15000+600000
- 632157 words of font info for 106 fonts, out of 8000000 for 9000
+ 58577 multiletter control sequences out of 15000+600000
+ 632173 words of font info for 108 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  107i,12n,110p,1204b,1058s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on report.pdf (21 pages).
+Output written on report.pdf (26 pages).

@@ -1,16 +1,16 @@
 \contentsline {section}{\numberline {1}گام اول: تعریف مسئله}{2}{section.1}%
-\contentsline {section}{\numberline {2}گام دوم: تحلیل نیازمندی‌ها}{3}{section.2}%
-\contentsline {section}{\numberline {3}گام سوم: جمع‌آوری داده}{4}{section.3}%
-\contentsline {section}{\numberline {4}گام چهارم: طراحی و برچسب‌گذاری داده}{5}{section.4}%
-\contentsline {section}{\numberline {5}گام پنجم: پیش‌پردازش داده}{6}{section.5}%
-\contentsline {section}{\numberline {6}گام ششم: انتخاب رویکرد و مدل}{7}{section.6}%
-\contentsline {section}{\numberline {7}گام هفتم: آموزش مدل}{9}{section.7}%
-\contentsline {section}{\numberline {8}گام هشتم: ارزیابی مدل}{11}{section.8}%
-\contentsline {section}{\numberline {9}گام نهم: بهبود و بهینه‌سازی}{13}{section.9}%
-\contentsline {section}{\numberline {10}گام دهم: اعتبارسنجی نهایی}{14}{section.10}%
-\contentsline {section}{\numberline {11}گام یازدهم: استقرار سیستم}{15}{section.11}%
-\contentsline {section}{\numberline {12}گام دوازدهم: پایش و مانیتورینگ}{17}{section.12}%
-\contentsline {section}{\numberline {13}گام سیزدهم: بازآموزی و بروزرسانی}{18}{section.13}%
-\contentsline {section}{\numberline {14}گام چهاردهم: ملاحظات اخلاقی و قانونی}{19}{section.14}%
-\contentsline {section}{\numberline {15}منابع}{20}{section.15}%
+\contentsline {section}{\numberline {2}گام دوم: تحلیل نیازمندی‌ها}{4}{section.2}%
+\contentsline {section}{\numberline {3}گام سوم: جمع‌آوری داده}{6}{section.3}%
+\contentsline {section}{\numberline {4}گام چهارم: طراحی و برچسب‌گذاری داده}{8}{section.4}%
+\contentsline {section}{\numberline {5}گام پنجم: پیش‌پردازش داده}{10}{section.5}%
+\contentsline {section}{\numberline {6}گام ششم: انتخاب رویکرد و مدل}{12}{section.6}%
+\contentsline {section}{\numberline {7}گام هفتم: آموزش مدل}{14}{section.7}%
+\contentsline {section}{\numberline {8}گام هشتم: ارزیابی مدل}{16}{section.8}%
+\contentsline {section}{\numberline {9}گام نهم: بهبود و بهینه‌سازی}{18}{section.9}%
+\contentsline {section}{\numberline {10}گام دهم: اعتبارسنجی نهایی}{19}{section.10}%
+\contentsline {section}{\numberline {11}گام یازدهم: استقرار سیستم}{20}{section.11}%
+\contentsline {section}{\numberline {12}گام دوازدهم: پایش و مانیتورینگ}{22}{section.12}%
+\contentsline {section}{\numberline {13}گام سیزدهم: بازآموزی و بروزرسانی}{23}{section.13}%
+\contentsline {section}{\numberline {14}گام چهاردهم: ملاحظات اخلاقی و قانونی}{24}{section.14}%
+\contentsline {section}{\numberline {15}منابع}{25}{section.15}%
 \contentsfinish 
