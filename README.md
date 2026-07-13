@@ -36,6 +36,8 @@ The program consists of over 200 hours of specialized training. Here is the brea
 ## 📂 Repository Structure
 
 - `01_python_programming/`
+- `02_supervised_machine_learning`
+- `03_mathmatics_in_data_science_and_ai`
 
 ## 🛠️ Tech Stack & Tools
 
