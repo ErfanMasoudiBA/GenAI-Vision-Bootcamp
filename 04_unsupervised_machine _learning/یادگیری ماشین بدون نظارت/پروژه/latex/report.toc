@@ -1,0 +1,9 @@
+\contentsline {section}{\numberline {1}تمرین اول - سوال اول: فشرده‌سازی تصویر با K-Means}{2}{section.1}%
+\contentsline {section}{\numberline {2}تمرین اول - سؤال دوم: خوشه‌بندی با DBSCAN}{5}{section.2}%
+\contentsline {section}{\numberline {3}تمرین اول - سؤال سوم: خوشه‌بندی سلسله‌مراتب}{8}{section.3}%
+\contentsline {section}{\numberline {4}تمرین اول - سؤال چهارم: خوشه‌بندی ترکیبی گوسی (GMM)}{11}{section.4}%
+\contentsline {section}{\numberline {5}تمرین دوم - سؤال اول: کاهش بعد با PCA و LDA}{15}{section.5}%
+\contentsline {section}{\numberline {6}تمرین دوم - سؤال دوم: بیشینه درست‌نمایی (MLE) با توزیع لاپلاس}{18}{section.6}%
+\contentsline {section}{\numberline {7}تمرین دوم - سؤال سوم: بررسی نفرین ابعاد}{21}{section.7}%
+\contentsline {section}{\numberline {8}تمرین دوم - سؤال چهارم: انتخاب ویژگی افزایشی Forward Selection}{23}{section.8}%
+\contentsfinish 

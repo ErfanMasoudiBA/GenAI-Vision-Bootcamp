@@ -1,0 +1,5 @@
+\contentsline {section}{\numberline {1}تمرین اول: پیش‌بینی فروش فیلم (\lr {CSM Dataset})}{2}{section.1}%
+\contentsline {section}{\numberline {2}تمرین دوم: پیش‌بینی بارش (\lr {BOM Dataset})}{6}{section.2}%
+\contentsline {section}{\numberline {3}تمرین سوم: تشخیص بدافزار (\lr {Anti Malware Dataset})}{8}{section.3}%
+\contentsline {section}{\numberline {4}تمرین چهارم: تشخیص چهره \lr {(Olivetti Faces)}}{10}{section.4}%
+\contentsfinish 
