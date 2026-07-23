@@ -6,4 +6,7 @@
 \contentsline {section}{\numberline {6}تمرین دوم - سؤال دوم: بیشینه درست‌نمایی (MLE) با توزیع لاپلاس}{18}{section.6}%
 \contentsline {section}{\numberline {7}تمرین دوم - سؤال سوم: بررسی نفرین ابعاد}{21}{section.7}%
 \contentsline {section}{\numberline {8}تمرین دوم - سؤال چهارم: انتخاب ویژگی افزایشی Forward Selection}{23}{section.8}%
+\contentsline {section}{\numberline {9}تمرین سوم - سوال اول: پیاده‌سازی Variational Autoencoder روی مجموعه داده CelebA}{26}{section.9}%
+\contentsline {section}{\numberline {10}تمرین سوم - سوال دوم: ترکیب VAE و Normalizing Flows}{34}{section.10}%
+\contentsline {section}{\numberline {11}تمرین سوم - سوال سوم: یادگیری خودنظارتی (SSL)}{38}{section.11}%
 \contentsfinish 

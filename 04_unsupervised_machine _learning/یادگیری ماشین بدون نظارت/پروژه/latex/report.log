@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.17)  20 JUL 2026 13:27
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.17)  22 JUL 2026 15:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1678,7 +1678,327 @@ e
 
 File: logo.png Graphic file (type bmp)
 <logo.png>
-[25] (report.aux)
+[25] (steps/step09.tex
+Overfull \hbox (0.99493pt too wide) in paragraph at lines 7--7
+[]\TU/Vazirmatn(0)/m/n/12 معمولی و نسخه واریشنال آن، ابتدا یک []\TU/lmroman10-r
+egular(0)/m/n/12 Simple Autoencoder[] \TU/Vazirmatn(0)/m/n/12 به طور کامل پیاده
+‌سازی[]
+ []
+
+
+Overfull \hbox (0.38629pt too wide) in paragraph at lines 34--34
+[][]\TU/Vazirmatn(0)/m/n/12 خلاصه معماری (خروجی []\TU/lmroman10-regular(0)/m/n/
+12 encoder.summary()[]\TU/Vazirmatn(0)/m/n/12 ) نشان می‌دهد که تعداد پارامترهای
+[]
+ []
+
+
+Overfull \hbox (13.74998pt too wide) in paragraph at lines 34--34
+[]\TU/Vazirmatn(0)/m/n/12 قابل‌آموزش عمدتاً در لایه []\TU/lmroman10-regular(0)/
+m/n/12 Dense[] \TU/Vazirmatn(0)/m/n/12 انتهایی متمرکز است؛ زیرا این لایه، خروجی
+ مسطح‌شده[]
+ []
+
+File: images/encoder_summary.png Graphic file (type bmp)
+<images/encoder_summary.png>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 34.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (0.71417pt too wide) in paragraph at lines 48--48
+[][]\TU/Vazirmatn(0)/m/n/12 در تمام لایه‌های میانی از []\TU/lmroman10-regular(0
+)/m/n/12 LeakyReLU[] \TU/Vazirmatn(0)/m/n/12 استفاده شده، اما لایه آخر با تابع 
+فعال‌سازی[]
+ []
+
+File: images/decoder_summary.png Graphic file (type bmp)
+<images/decoder_summary.png>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 48.
+See the caption package documentation for explanation.
+
+File: images/ae_reconstruction.png Graphic file (type bmp)
+<images/ae_reconstruction.png>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 74.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (35.61584pt too wide) in paragraph at lines 86--86
+[][]\TU/Vazirmatn(0)/m/n/12 استفاده از این ترفند ضروری است، زیرا نمونه‌برداری ت
+صادفی مستقیم غیرقابل‌مشتق‌گیری[]
+ []
+
+
+Overfull \hbox (7.69176pt too wide) in paragraph at lines 86--86
+[]\TU/Vazirmatn(0)/m/n/12 بودن به متغیر کمکی $\OML/cmm/m/it/12 ^^O$\TU/Vazirmat
+n(0)/m/n/12 ، مسیر محاسباتی مربوط به $\OML/cmm/m/it/12 ^^V$ \TU/Vazirmatn(0)/m/
+n/12 و $[] \OML/cmm/m/it/12 ^^[[]$ \TU/Vazirmatn(0)/m/n/12 همچنان قابل مشتق‌گیر
+ی[]
+ []
+
+File: images/vae_reconstruction.png Graphic file (type bmp)
+<images/vae_reconstruction.png>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 115.
+See the caption package documentation for explanation.
+
+File: images/vae_generated.png Graphic file (type bmp)
+<images/vae_generated.png>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 128.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (2.93198pt too wide) in paragraph at lines 140--140
+[]\TU/Vazirmatn(0)/m/n/12 بازسازی، قابلیت منحصربه‌فرد تولید نمونه‌های جدید و مع
+نادار را در اختیار قرار می‌دهد[]
+ []
+
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+File: logo.png Graphic file (type bmp)
+<logo.png>
+[26]
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+File: logo.png Graphic file (type bmp)
+<logo.png>
+[27]
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+File: logo.png Graphic file (type bmp)
+<logo.png>
+[28]
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+File: logo.png Graphic file (type bmp)
+<logo.png>
+[29]
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+File: logo.png Graphic file (type bmp)
+<logo.png>
+[30]
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+File: logo.png Graphic file (type bmp)
+<logo.png>
+[31]
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+File: logo.png Graphic file (type bmp)
+<logo.png>
+[32])
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+File: logo.png Graphic file (type bmp)
+<logo.png>
+[33] (steps/step10.tex
+Overfull \hbox (57.57953pt too wide) in paragraph at lines 1--1
+[][][]  \TU/Vazirmatn(0)/b/n/17.28 تمرین سوم - سوال دوم: ترکیب []\TU/lmroman10-
+regular(0)/b/n/17.28 Variational Autoencoders[][]
+ []
+
+
+Overfull \hbox (4.194pt too wide) in paragraph at lines 18--18
+[]\TU/Vazirmatn(0)/m/n/12 انتخاب شد. مجموعه داده []\TU/lmroman10-regular(0)/m/n
+/12 FashionMNIST[] \TU/Vazirmatn(0)/m/n/12 شامل تصاویر \TU/Vazirmatn(1)/m/n/12 
+۲۸\TU/Vazirmatn(0)/m/n/12 ×\TU/Vazirmatn(1)/m/n/12 ۲۸ \TU/Vazirmatn(0)/m/n/12 پ
+یکسل سیاه‌وسفید[]
+ []
+
+File: images/original_batch.png Graphic file (type bmp)
+<images/original_batch.png>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 18.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (29.97333pt too wide) in paragraph at lines 30--30
+[]\TU/Vazirmatn(0)/m/n/12 عبارت تنظیم‌کننده (مانند KL Divergence یا Variational
+ Free Energy) برای ساختاردهی[]
+ []
+
+File: images/loss_plot.png Graphic file (type bmp)
+<images/loss_plot.png>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 30.
+See the caption package documentation for explanation.
+
+File: images/reconstructed.png Graphic file (type bmp)
+<images/reconstructed.png>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 42.
+See the caption package documentation for explanation.
+
+File: images/pca_output.png Graphic file (type bmp)
+<images/pca_output.png>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 61.
+See the caption package documentation for explanation.
+
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+File: logo.png Graphic file (type bmp)
+<logo.png>
+[34]
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+File: logo.png Graphic file (type bmp)
+<logo.png>
+[35]
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+File: logo.png Graphic file (type bmp)
+<logo.png>
+[36])
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+File: logo.png Graphic file (type bmp)
+<logo.png>
+[37] (steps/step11.tex
+Overfull \hbox (16.785pt too wide) in paragraph at lines 7--7
+[]\TU/Vazirmatn(0)/m/n/12 هدف از این تمرین، پیاده‌سازی یک مدل یادگیری خودنظارتی
+ ([]\TU/lmroman10-regular(0)/m/n/12 Self-Supervised Learning[]\TU/Vazirmatn(0)/
+m/n/12 )[]
+ []
+
+
+Overfull \hbox (0.29164pt too wide) in paragraph at lines 19--19
+[]\TU/Vazirmatn(0)/m/n/12 در مرحله‌ی اول، یک مدل پایه شامل یک []\TU/lmroman10-r
+egular(0)/m/n/12 Backbone[] \TU/Vazirmatn(0)/m/n/12 کانولوشنی و یک []\TU/lmroma
+n10-regular(0)/m/n/12 Head[] \TU/Vazirmatn(0)/m/n/12 تمام‌متصل[]
+ []
+
+File: images/baseline_loss.png Graphic file (type bmp)
+<images/baseline_loss.png>
+File: images/baseline_acc.png Graphic file (type bmp)
+<images/baseline_acc.png>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 19.
+See the caption package documentation for explanation.
+
+File: images/aug_pairs.png Graphic file (type bmp)
+<images/aug_pairs.png>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 30.
+See the caption package documentation for explanation.
+
+File: images/lr_schedule.png Graphic file (type bmp)
+<images/lr_schedule.png>
+File: images/contrastive_loss.png Graphic file (type bmp)
+<images/contrastive_loss.png>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 42.
+See the caption package documentation for explanation.
+
+File: images/finetuned_loss.png Graphic file (type bmp)
+<images/finetuned_loss.png>
+File: images/finetuned_acc.png Graphic file (type bmp)
+<images/finetuned_acc.png>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 64.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (6.33896pt too wide) in paragraph at lines 64--64
+[][]\TU/Vazirmatn(0)/b/n/12 مقایسه و جمع‌بندی نهایی: \TU/Vazirmatn(0)/m/n/12 نم
+ودار زیر، مقایسه دقت مدل پایه (بدون پیش‌آموزش)[]
+ []
+
+File: images/comparison_acc.png Graphic file (type bmp)
+<images/comparison_acc.png>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 64.
+See the caption package documentation for explanation.
+
+
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+File: logo.png Graphic file (type bmp)
+<logo.png>
+[38]
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+File: logo.png Graphic file (type bmp)
+<logo.png>
+[39]
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+File: logo.png Graphic file (type bmp)
+<logo.png>
+[40])
+\endL or \endR problem (0 missing, 1 extra) has occurred while \output is activ
+e
+[][][][] 
+ []
+
+File: logo.png Graphic file (type bmp)
+<logo.png>
+[41] (report.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-11-06>
@@ -1688,15 +2008,15 @@ L3 programming layer <2025-11-06>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: FB4B96588170BA94CA06048875DAA36F;3277.
+(rerunfilecheck)             Checksum: 74DF63354F5B2D338A4E42154DAF38FB;4639.
  ) 
 Here is how much of TeX's memory you used:
- 32462 strings out of 402987
- 691953 string characters out of 5452870
- 1156955 words of memory out of 5000000
- 60592 multiletter control sequences out of 15000+600000
- 633967 words of font info for 111 fonts, out of 8000000 for 9000
+ 32662 strings out of 402987
+ 697255 string characters out of 5452870
+ 1174955 words of memory out of 5000000
+ 60764 multiletter control sequences out of 15000+600000
+ 633975 words of font info for 112 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 107i,12n,110p,1204b,1059s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 107i,12n,110p,1204b,1064s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on report.pdf (26 pages).
+Output written on report.pdf (42 pages).
