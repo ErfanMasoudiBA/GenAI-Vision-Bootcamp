@@ -38,7 +38,8 @@ The program consists of over 200 hours of specialized training. Here is the brea
 - `00_workshop/`
 - `01_python_programming/`
 - `02_supervised_machine_learning/`
-- `03_mathmatics_in_data_science_and_ai/`
+- `03_mathematics_in_data_science_and_ai/`
+- `04_unsupervised_machine_learning/`
 
 ## 🛠️ Tech Stack & Tools
 
