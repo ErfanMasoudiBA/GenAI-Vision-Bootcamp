@@ -1,0 +1,3 @@
+\contentsline {section}{\numberline {1}پروژه اول: خوشه‌بندی طیفی \lr {(Spectral Clustering)}}{2}{section.1}%
+\contentsline {section}{\numberline {2}پروژه دوم - تشخیص چهره با PCA}{6}{section.2}%
+\contentsfinish 

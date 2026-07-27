@@ -1,0 +1,86 @@
+% ==========================================
+%          styles.tex (قالب و استایل‌ها)
+% ==========================================
+\usepackage{tikz}
+\usetikzlibrary{calc, shadings}
+\usepackage{shadow}
+\usepackage{fontawesome5}
+\usepackage{fancyhdr}
+\usepackage{eso-pic} 
+\usepackage[a4paper,margin=2.5cm,headheight=1.2cm,headsep=0.8cm]{geometry}
+\usepackage{needspace}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins, breakable}
+\usepackage{graphicx}
+\usepackage{titletoc}
+\usepackage{caption}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{hyperref}
+\usepackage{xepersian}   
+
+% تنظیم فونت‌ها
+\settextfont[Scale=1.1]{Vazirmatn}
+\setdigitfont{Vazirmatn}
+
+% --- تعریف پالت رنگی هماهنگ با همراه اول ---
+\definecolor{primary}{HTML}{1F3A5F}   % سرمه‌ای عمیق
+\definecolor{MCIblue}{HTML}{009FE3}   % آبی همراه اول
+\definecolor{MCIorange}{HTML}{F26F21} % نارنجی همراه اول
+\definecolor{textgray}{HTML}{2B2B2B}  % متن بدنه
+\definecolor{lightbg}{HTML}{F8F9FA}   % پس‌زمینه ملایم باکس‌ها
+\definecolor{rulegray}{HTML}{E2E8F0}  % خطوط هادی ملایم
+
+\definecolor{clrBlue}{RGB}{31,97,141}
+\definecolor{clrGreen}{RGB}{30,132,73}
+\definecolor{clrPurple}{RGB}{118,68,138}
+\definecolor{clrOrange}{RGB}{202,89,23}
+
+% تنظیمات لینک‌ها
+\hypersetup{
+    colorlinks    = true,
+    linkcolor     = clrBlue,
+    pdftitle      = {گزارش کار تمارین ریاضیات در علوم‌داده و هوش‌مصنوعی},
+    bookmarksopen = true,
+    unicode       = true
+}
+
+% --- تعریف باکس گام‌ها (تمیز، ساده و بدون تکرار عنوان) ---
+\newtcolorbox{stepbox}{
+    breakable,
+    enhanced jigsaw,,
+    colback      = lightbg,
+    colframe     = MCIblue,
+    boxrule      = 0pt,
+    rightrule    = 4pt,          % نوار رنگی سمت راست
+    arc          = 3mm,
+    top=16pt, bottom=16pt, left=16pt, right=16pt,
+    fontupper    = \linespread{1.6}\selectfont\color{textgray},
+    shadow       = {0mm}{-1mm}{2mm}{gray!10}, % سایه بسیار ملایم زیر باکس
+    parbox       = false,
+    before upper={\parindent15pt}
+}
+
+% --- استایل اختصاصی برای فیلدها درون باکس ---
+\newcommand{\field}[2]{%
+    \noindent\textbf{\textcolor{primary}{\faChevronLeft\ #1}}\\[0.15cm]
+    #2\par\vspace{0.6cm}
+}
+
+% --- تنظیمات هدر و فوتر صفحات داخلی ---
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\includegraphics[height=0.8cm]{logo.png}}
+\fancyhead[L]{\small\color{textgray!70}\faLaptopCode\ ریاضیات در علوم‌داده و هوش‌مصنوعی}
+\fancyfoot[C]{\thepage}
+
+% خط دو رنگ زیر هدر برای هارمونی با صفحه اول
+\renewcommand{\headrule}{%
+    \vspace{-4pt}
+    \color{MCIblue}\hrule height 1.5pt width \headwidth
+    \vspace{1pt}
+    \color{MCIorange}\hrule height 0.5pt width \headwidth
+}
+\renewcommand{\footrulewidth}{0.4pt}

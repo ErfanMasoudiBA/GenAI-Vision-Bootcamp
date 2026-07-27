@@ -4,3 +4,18 @@
 *.mp3
 *.webm
 img_align_celeba
+
+# Cache and local models
+**/clip_local_cache/
+*.incomplete
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+00_workshop/04_31_Tir/Academy hamrah/Academy hamrah/Hamrah-Academy/res/sp.avi
+*.avi

@@ -1,0 +1,97 @@
+% ==========================================
+%            report.tex (فایل اصلی)
+% ==========================================
+\documentclass[12pt, a4paper]{article}
+
+% فراخوانی استایل‌ها و پکیج‌ها
+\input{styles.tex}
+
+\begin{document}
+
+%----------------------------------------
+%          TITLE PAGE (صفحه جلد)
+%----------------------------------------
+\begin{titlepage}
+\newgeometry{left=2cm,right=2cm,top=0cm,bottom=1.5cm}
+
+\begin{tikzpicture}[remember picture,overlay]
+    \fill[MCIorange] ([xshift=-8cm]current page.north east) -- (current page.north east) -- ([yshift=-4cm]current page.north east) -- cycle;
+    \fill[MCIblue] ([xshift=-7.5cm]current page.north east) -- (current page.north east) -- ([yshift=-3.5cm]current page.north east) -- cycle;
+    \fill[MCIblue] (current page.south west) rectangle ([yshift=0.3cm]current page.south east);
+    \fill[MCIorange] (current page.south west) rectangle ([yshift=0.1cm]current page.south east);
+\end{tikzpicture}
+
+\vspace*{1.2cm}
+\begin{center}
+    \begin{minipage}{0.9\textwidth}
+        \begin{flushleft}
+            \includegraphics[width=4.2cm]{logo.png} 
+        \end{flushleft}
+    \end{minipage}
+\end{center}
+
+\vspace{2.2cm}
+
+\begin{center}
+    \setLTR
+    \textcolor{gray!80}{\large\textsf{گزارشکار تمرین هفته‌ی چهارم}} \vspace{0.4cm}
+    \setRTL
+    
+    \begin{minipage}{0.8\textwidth}
+        \centering
+        {\fontsize{26}{34}\selectfont\bfseries\color[HTML]{009FE3} دوره آفلاین ریاضیات}\\[0.3cm]
+        {\fontsize{26}{34}\selectfont\bfseries\color[HTML]{1F3A5F} در علوم‌داده و هوش‌مصنوعی}
+    \end{minipage}
+    
+    \vspace{0.6cm}
+    \textcolor{MCIorange}{\rule{8cm}{2pt}}
+    \vspace{0.6cm}
+    
+    {\large\color{textgray} دوره آموزشی: ریاضیات در علوم‌داده و هوش‌مصنوعی} \\[0.2cm]
+    {\large\color{textgray} تاریخ گزارش: ۳۱ تیر تا ۶ مرداد ۱۴۰۵}
+    
+    \vspace{1.5cm}
+    \begin{minipage}{0.6\textwidth}
+        \centering
+        \large
+        \faUser\ \textbf{مدرس:} سرکار خانم مریم امیرمزلقانی \\[0.4cm]
+        \faUserGraduate\ \textbf{نگارنده:} سیدعرفان مسعودی
+    \end{minipage}
+\end{center}
+
+\vfill
+
+\begin{tcolorbox}[
+    enhanced,
+    colback=lightbg,
+    colframe=rulegray,
+    arc=3mm,
+    boxrule=0.5pt,
+    left=10pt, right=10pt, top=12pt, bottom=12pt
+]
+    \centering
+    \small
+    \begin{tabular}{ccc}
+        \faEnvelope\ \texttt{erfanmasoudiba@gmail.com} & 
+        \faTelegram\ @erfanmasoudiba \\ [0.3cm]
+        \faGithub\ github.com/ErfanMasoudiBA & 
+        \faLinkedin\ linkedin.com/in/erfan-masoudi
+    \end{tabular}
+\end{tcolorbox}
+
+\vspace{0.8cm}
+
+\end{titlepage}
+\restoregeometry
+%----------------------------------------
+
+\newpage
+\tableofcontents
+\newpage
+
+% --- ایمپورت کردن گام‌ها به ترتیب ---
+\input{steps/step01.tex} \newpage
+\input{steps/step02.tex} \newpage
+
+
+\end{document}
