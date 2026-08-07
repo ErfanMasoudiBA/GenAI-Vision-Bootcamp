@@ -22,3 +22,48 @@ Thumbs.db
 
 00_workshop/05_7_Mordad/data
 00_workshop/04_31_Tir/Academy hamrah/workshop_task/cifar-10-python.tar.gz
+05_deep_learning/Exercises/دیتاست تمرین 5/vehicle_images
+
+
+# Core LaTeX auxiliary files
+*.aux
+*.bbl
+*.blg
+*.brf
+*.cb
+*.cb2
+*.fdb_latexmk
+*.fls
+*.idx
+*.ilg
+*.ind
+*.lof
+*.log
+*.lot
+*.out
+*.toc
+
+# Beamer presentation files
+*.nav
+*.snm
+*.vrb
+
+# SyncTeX and other editor temp files
+*.synctex.gz
+*.synctex(busy)
+*.pdfsync
+
+# Output files (DVI, PS, PDF)
+*.dvi
+*.ps
+*.pdf
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+
+05_deep_learning/Exercises/notebooks/archive3
+05_deep_learning/Exercises/notebooks/17flowerclasses
+00_workshop/05_7_Mordad/MCI_Academy-20260805T155144Z-1-002/MCI_Academy/data
+00_workshop/05_7_Mordad/MCI_Academy-20260805T155144Z-1-002/MCI_Academy/movie
