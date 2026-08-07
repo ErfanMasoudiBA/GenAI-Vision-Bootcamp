@@ -43,6 +43,9 @@ Thumbs.db
 *.out
 *.toc
 
+00_workshop/06_14_Mordad/HamrahAcademy-Detection-20260805T055135Z-1-001/HamrahAcademy-Detection/notebooks-data/notebooks-data/tyre-2
+00_workshop/05_7_Mordad/MCI_Academy-20260805T155144Z-1-002/MCI_Academy/data
+
 # Beamer presentation files
 *.nav
 *.snm
@@ -65,5 +68,5 @@ Thumbs.db
 
 05_deep_learning/Exercises/notebooks/archive3
 05_deep_learning/Exercises/notebooks/17flowerclasses
-00_workshop/05_7_Mordad/MCI_Academy-20260805T155144Z-1-002/MCI_Academy/data
+
 00_workshop/05_7_Mordad/MCI_Academy-20260805T155144Z-1-002/MCI_Academy/movie
