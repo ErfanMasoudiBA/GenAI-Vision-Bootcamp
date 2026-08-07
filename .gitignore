@@ -43,7 +43,7 @@ Thumbs.db
 *.out
 *.toc
 
-00_workshop/06_14_Mordad/HamrahAcademy-Detection-20260805T055135Z-1-001/HamrahAcademy-Detection/notebooks-data/notebooks-data/tyre-2
+
 00_workshop/05_7_Mordad/MCI_Academy-20260805T155144Z-1-002/MCI_Academy/data
 
 # Beamer presentation files
@@ -51,11 +51,14 @@ Thumbs.db
 *.snm
 *.vrb
 
+00_workshop/06_14_Mordad/HamrahAcademy-Detection-20260805T055135Z-1-001/HamrahAcademy-Detection/notebooks-data/notebooks-data/tyre-2
 # SyncTeX and other editor temp files
 *.synctex.gz
 *.synctex(busy)
 *.pdfsync
 
+
+00_workshop/04_31_Tir/Academy hamrah/workshop_task/vehicles.csv
 # Output files (DVI, PS, PDF)
 *.dvi
 *.ps
@@ -64,9 +67,11 @@ Thumbs.db
 # OS generated files
 .DS_Store
 Thumbs.db
+00_workshop/05_7_Mordad/homeworks/fer2013_project/dataset
 
 
 05_deep_learning/Exercises/notebooks/archive3
 05_deep_learning/Exercises/notebooks/17flowerclasses
 
 00_workshop/05_7_Mordad/MCI_Academy-20260805T155144Z-1-002/MCI_Academy/movie
+

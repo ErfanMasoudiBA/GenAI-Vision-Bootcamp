@@ -1,0 +1,9 @@
+batch_size: 64
+learning_rate: 0.001
+epochs: 30
+num_classes: 7
+image_size: 224
+optimizer: Adam
+weight_decay: 0.0001
+random_seed: 42
+data_path: "/content/fer2013.csv"

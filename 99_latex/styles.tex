@@ -1,0 +1,263 @@
+% ==========================================
+%          styles.tex (قالب و استایل‌ها)
+%  نسخه‌ی ۲ — قابل استفاده برای همه‌ی گزارش‌ها و تمرین‌های بوت‌کمپ
+% ==========================================
+
+% ---------- بسته‌های پایه ----------
+\usepackage{tikz}
+\usetikzlibrary{calc, shadings, shadows.blur}
+\usepackage{fontawesome5}
+\usepackage{fancyhdr}
+\usepackage{eso-pic}
+\usepackage[a4paper,margin=2.5cm,headheight=1.4cm,headsep=0.9cm,footskip=1.1cm]{geometry}
+\usepackage{needspace}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins, breakable, listings, skins}
+\usepackage{graphicx}
+\usepackage{titlesec}
+\usepackage{titletoc}
+\usepackage{tocloft}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{listings}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage[unicode]{hyperref}
+\usepackage{xepersian}
+
+% ---------- فونت‌ها ----------
+\settextfont[Scale=1.05]{Vazirmatn}
+\setdigitfont{Vazirmatn}
+\setlatintextfont[Scale=0.98]{Vazirmatn}   % یکدست شدن فونت لاتین با فارسی؛ در صورت نیاز می‌توانید فونت لاتین جدا تعریف کنید
+
+% ==========================================
+%   ۱) پالت رنگی — پایه‌ی برند + رنگ‌های معنایی
+% ==========================================
+\definecolor{primary}{HTML}{1F3A5F}     % سرمه‌ای عمیق (متن تیتر / تاکید)
+\definecolor{MCIblue}{HTML}{009FE3}     % آبی برند
+\definecolor{MCIorange}{HTML}{F26F21}   % نارنجی برند
+\definecolor{textgray}{HTML}{2B2B2B}    % متن بدنه
+\definecolor{lightbg}{HTML}{F8F9FA}     % پس‌زمینه‌ی ملایم باکس‌ها
+\definecolor{rulegray}{HTML}{E2E8F0}    % خطوط ظریف
+
+% رنگ‌های معنایی برای جعبه‌های نکته/هشدار/نکته‌ی کد
+\definecolor{noteBlue}{HTML}{0B6FA8}
+\definecolor{noteBlueBg}{HTML}{EAF5FC}
+\definecolor{tipGreen}{HTML}{1E8449}
+\definecolor{tipGreenBg}{HTML}{EAF7EF}
+\definecolor{warnAmber}{HTML}{B7791F}
+\definecolor{warnAmberBg}{HTML}{FEF6E7}
+\definecolor{codeBg}{HTML}{F5F2F0}
+\definecolor{codeFrame}{HTML}{D8D2CC}
+
+\definecolor{clrBlue}{RGB}{31,97,141}
+\definecolor{clrGreen}{RGB}{30,132,73}
+\definecolor{clrPurple}{RGB}{118,68,138}
+\definecolor{clrOrange}{RGB}{202,89,23}
+
+% ==========================================
+%   ۲) لینک‌ها و متادیتای PDF
+% ==========================================
+\hypersetup{
+    colorlinks    = true,
+    linkcolor     = clrBlue,
+    citecolor     = tipGreen,
+    urlcolor      = MCIblue,
+    pdfauthor     = {سیدعرفان مسعودی},
+    pdftitle      = {گزارش کار — بوت‌کمپ هوش‌مصنوعی مولد (GenAI) محور تصویر},
+    bookmarksopen = true,
+    unicode       = true
+}
+
+% ==========================================
+%   ۳) عنوان‌بندی بخش‌ها (Section Styling)
+%   به‌جای عنوان ساده‌ی article، یک نوار رنگی حرفه‌ای
+% ==========================================
+\newtcbox{\sectiontag}{on line, colback=primary, colframe=primary,
+    boxrule=0pt, arc=2mm, left=10pt, right=10pt, top=6pt, bottom=6pt,
+    fontupper=\color{white}\Large\bfseries, boxsep=0pt}
+
+\titleformat{\section}
+  {\normalfont}
+  {}{0pt}
+  {\noindent\begin{tcolorbox}[
+        enhanced, colback=primary, colframe=primary,
+        boxrule=0pt, arc=2mm, width=\textwidth,
+        left=12pt, right=12pt, top=8pt, bottom=8pt,
+        borderline south={2.4pt}{0pt}{MCIorange}
+    ]\color{white}\Large\bfseries}
+  [\end{tcolorbox}]
+\titlespacing*{\section}{0pt}{6pt}{18pt}
+
+\titleformat{\subsection}
+  {\normalfont\large\bfseries\color{primary}}
+  {\faAngleLeft\ }{4pt}{}
+\titlespacing*{\subsection}{0pt}{14pt}{8pt}
+
+% ==========================================
+%   ۴) فهرست مطالب زیبا (نقطه‌چین + رنگ)
+% ==========================================
+\renewcommand{\cftsecfont}{\bfseries\color{primary}}
+\renewcommand{\cftsecpagefont}{\bfseries\color{MCIblue}}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftdotsep}{1.4}
+\setlength{\cftbeforesecskip}{10pt}
+\renewcommand{\cftsubsecfont}{\color{textgray}}
+\renewcommand{\cftsubsecpagefont}{\color{textgray}}
+
+% عنوان صفحه‌ی فهرست
+\renewcommand{\contentsname}{%
+    \begin{center}
+        {\Large\bfseries\color{primary}\faListUl\ فهرست مطالب}\\[4pt]
+        \textcolor{MCIorange}{\rule{5cm}{1.4pt}}
+    \end{center}
+    \vspace{0.6cm}
+}
+
+% ==========================================
+%   ۵) جعبه‌ی گام اصلی — stepbox (همان قبلی، با کمی پرداخت)
+% ==========================================
+\newtcolorbox{stepbox}{
+    breakable,
+    enhanced jigsaw,
+    colback      = lightbg,
+    colframe     = MCIblue,
+    boxrule      = 0pt,
+    rightrule    = 4pt,
+    arc          = 3mm,
+    top=16pt, bottom=16pt, left=16pt, right=16pt,
+    fontupper    = \linespread{1.55}\selectfont\color{textgray},
+    boxsep=1pt,
+    parbox = false,
+    before upper={\parindent15pt}
+}
+
+% فیلد داخل stepbox (بدون تغییر رفتار قبلی)
+\newcommand{\field}[2]{%
+    \noindent\textbf{\textcolor{primary}{\faChevronLeft\ #1}}\\[0.15cm]
+    #2\par\vspace{0.6cm}
+}
+
+% ==========================================
+%   ۶) جعبه‌های معنایی جدید: نکته / پیشنهاد / هشدار
+%   برای همه‌ی گزارش‌های آینده قابل استفاده‌اند
+% ==========================================
+\newtcolorbox{notebox}[1][نکته]{
+    breakable, enhanced jigsaw,
+    colback=noteBlueBg, colframe=noteBlue,
+    boxrule=0pt, leftrule=3.5pt, arc=2mm,
+    left=12pt, right=12pt, top=8pt, bottom=8pt,
+    fonttitle=\bfseries\color{noteBlue},
+    title={\faInfoCircle\ #1},
+    attach title to upper={:\ },
+    fontupper=\color{textgray}
+}
+
+\newtcolorbox{tipbox}[1][پیشنهاد]{
+    breakable, enhanced jigsaw,
+    colback=tipGreenBg, colframe=tipGreen,
+    boxrule=0pt, leftrule=3.5pt, arc=2mm,
+    left=12pt, right=12pt, top=8pt, bottom=8pt,
+    fonttitle=\bfseries\color{tipGreen},
+    title={\faLightbulb\ #1},
+    attach title to upper={:\ },
+    fontupper=\color{textgray}
+}
+
+\newtcolorbox{warnbox}[1][هشدار]{
+    breakable, enhanced jigsaw,
+    colback=warnAmberBg, colframe=warnAmber,
+    boxrule=0pt, leftrule=3.5pt, arc=2mm,
+    left=12pt, right=12pt, top=8pt, bottom=8pt,
+    fonttitle=\bfseries\color{warnAmber},
+    title={\faExclamationTriangle\ #1},
+    attach title to upper={:\ },
+    fontupper=\color{textgray}
+}
+
+% ==========================================
+%   ۷) جعبه‌ی کد — برای اسنیپت‌های پایتون / کد پرامپت
+% ==========================================
+\lstdefinestyle{codestyle}{
+    basicstyle=\ttfamily\small\setLTR,
+    keywordstyle=\bfseries\color{clrPurple},
+    commentstyle=\itshape\color{gray},
+    stringstyle=\color{tipGreen},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    numbersep=8pt,
+    breaklines=true,
+    showstringspaces=false,
+    tabsize=4,
+    backgroundcolor=\color{codeBg},
+    frame=none,
+}
+\lstset{style=codestyle}
+
+\newtcolorbox{codebox}[1][کد]{
+    breakable, enhanced jigsaw,
+    colback=codeBg, colframe=codeFrame,
+    boxrule=0.6pt, arc=2mm,
+    left=6pt, right=6pt, top=6pt, bottom=6pt,
+    fonttitle=\bfseries\ttfamily\setLTR\color{textgray},
+    title={\faCode\ \setLTR #1},
+    coltitle=textgray,
+    colbacktitle=rulegray
+}
+% استفاده: \begin{codebox}[caption.py] \begin{lstlisting} ... \end{lstlisting} \end{codebox}
+
+% ==========================================
+%   ۸) کپشن تصاویر و جداول
+% ==========================================
+\captionsetup{
+    font       = {small, color=textgray},
+    labelfont  = {bf, color=MCIblue},
+    labelsep   = colon,
+    justification = centering,
+    margin     = 12pt
+}
+
+% ابزار کمکی برای نمایش چند تصویر کنار هم (گالری)
+% استفاده: \imagerow{img1}{img2}{کپشن زیر تصویر اول}{کپشن زیر تصویر دوم}{کپشن کلی}
+\newcommand{\imagerow}[3]{%
+    \begin{figure}[h!]
+        \centering
+        #1
+        \captionof{figure}{#2}
+        \label{#3}
+    \end{figure}
+}
+
+% ==========================================
+%   ۹) هدر و فوتر صفحات داخلی
+% ==========================================
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\includegraphics[height=0.8cm]{logo.png}}
+\fancyhead[L]{\small\color{textgray!70}\faLaptopCode\ \leftmark}
+\fancyfoot[C]{\small\color{textgray!70}\thepage}
+\fancyfoot[L]{\small\color{textgray!50}\faUserGraduate\ سیدعرفان مسعودی}
+
+\renewcommand{\headrule}{%
+    \vspace{-4pt}
+    \color{MCIblue}\hrule height 1.5pt width \headwidth
+    \vspace{1pt}
+    \color{MCIorange}\hrule height 0.5pt width \headwidth
+}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\footruleskip}{0.3pt}
+
+% \leftmark در فوتر/هدر از عنوان section پر می‌شود؛ برای این‌که علامت راهنما (##1) اضافه نشود:
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+
+% صفحه‌ی اول هر بخش بدون هدر/فوتر سنگین (اختیاری - سبک‌تر)
+\fancypagestyle{plain}{%
+  \fancyhf{}
+  \fancyfoot[C]{\small\color{textgray!70}\thepage}
+  \renewcommand{\headrule}{}
+}

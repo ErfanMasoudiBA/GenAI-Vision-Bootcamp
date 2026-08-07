@@ -1,0 +1,70 @@
+\section{راهنمای قالب \lr{(Template Guide)} — قابل حذف در نسخه‌ی نهایی}
+
+\begin{stepbox}
+\field{۱. جعبه‌ی گام \lr{(stepbox)}}{
+همین جعبه‌ای که این متن داخل آن است. برای هر تمرین/زیرمسئله از دستور \texttt{\textbackslash field\{عنوان\}\{متن\}} داخل \texttt{stepbox} استفاده کنید.
+}
+\end{stepbox}
+
+\vspace{0.5cm}
+\noindent برای نکات جانبی، به‌جای نوشتن آن‌ها داخل \texttt{stepbox} اصلی، از سه جعبه‌ی معنایی زیر استفاده کنید تا گزارش خواناتر شود:
+
+\begin{notebox}
+این یک \textbf{نکته‌ی توضیحی} است؛ مثلاً یادآوری یک تعریف ریاضی یا اشاره به مرجع بیرونی.
+\end{notebox}
+
+\begin{tipbox}[پیشنهاد عملی]
+این یک \textbf{پیشنهاد} است؛ مثلاً یک ترفند برای سریع‌تر اجرا شدن کد یا انتخاب بهتر هایپرپارامتر.
+\end{tipbox}
+
+\begin{warnbox}
+این یک \textbf{هشدار} است؛ مثلاً نقطه‌ای که در پیاده‌سازی معمولاً اشتباه رخ می‌دهد (مثل عدم نرمال‌سازی ماتریس لاپلاسین).
+\end{warnbox}
+
+\subsection{نمایش کد}
+برای اسنیپت‌های پایتون یا پرامپت‌های مدل مولد تصویر از \texttt{codebox} به همراه \texttt{lstlisting} استفاده کنید:
+
+\begin{codebox}[spectral\_clustering.py]
+\begin{lstlisting}[language=Python]
+import numpy as np
+from sklearn.cluster import KMeans
+
+def spectral_clustering(A, k):
+    D = np.diag(A.sum(axis=1))
+    L = D - A
+    eigvals, eigvecs = np.linalg.eigh(L)
+    U = eigvecs[:, :k]
+    labels = KMeans(n_clusters=k, n_init=10).fit_predict(U)
+    return labels
+\end{lstlisting}
+\end{codebox}
+
+\subsection{معادلات}
+معادلات همان‌طور که قبلاً می‌نوشتید کار می‌کنند و نیازی به تغییر ندارند:
+\[
+L = D - A, \qquad Lx = \lambda x
+\]
+
+\subsection{گالری تصاویر کنار هم}
+برای مقایسه‌ی دو تصویر (مثلاً قبل/بعد از یک مدل مولد تصویر) به‌جای دو \texttt{figure} جدا از این الگو استفاده کنید:
+
+\begin{figure}[h!]
+\centering
+\begin{subfigure}{0.46\textwidth}
+    \centering
+    \fbox{\rule{0pt}{3cm}\rule{3cm}{0pt}} % جای‌گیر تصویر ۱ — با \includegraphics جایگزین کنید
+    \caption{قبل}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.46\textwidth}
+    \centering
+    \fbox{\rule{0pt}{3cm}\rule{3cm}{0pt}} % جای‌گیر تصویر ۲ — با \includegraphics جایگزین کنید
+    \caption{بعد}
+\end{subfigure}
+\caption{نمونه‌ی نمایش دو تصویر کنار هم برای مقایسه}
+\label{fig:before_after_demo}
+\end{figure}
+
+\begin{notebox}[نحوه‌ی استفاده در گزارش‌های بعدی]
+کافی است در ابتدای \texttt{report.tex}، پنج دستور \texttt{\textbackslash reportWeek}، \texttt{\textbackslash reportTitleFa} و... را با عنوان تمرین جدید عوض کنید و فایل‌های \texttt{steps/stepXX.tex} جدید را \texttt{input} کنید؛ کل ظاهر و استایل بدون تغییر باقی می‌ماند.
+\end{notebox}

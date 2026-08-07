@@ -1,0 +1,7 @@
+Wider Download Link:
+http://shuoyang1213.me/WIDERFACE/
+Download Training, Validation and Annotations
+You should have three folders here:
+WIDER_train
+WIDER_val
+wider_face_split
