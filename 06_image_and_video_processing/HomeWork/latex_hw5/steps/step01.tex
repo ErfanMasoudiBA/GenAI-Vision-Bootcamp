@@ -1,0 +1,58 @@
+% ==========================================
+% فایل: steps/step01.tex
+% گام ۱: استخراج نقاط کلیدی
+% ==========================================
+
+\section{گام (۱): استخراج نقاط کلیدی (\lr{Key Points})}
+
+\begin{stepbox}
+\field{روند کار و اعمال الگوریتم‌ها}{
+در این مرحله هدف یافتن ویژگی‌های متمایز هندسی در تصاویر است. ما سه الگوریتم \lr{SIFT}، \lr{FAST} و \lr{Harris} را روی نسخه‌ی سیاه‌وسفید تصاویر اعمال کردیم. برای درک بهتر تفاوت این روش‌ها، خروجی آن‌ها بر روی مجموعه‌ی دوم (\lr{Set 2}) که دارای بافت‌های متراکم طبیعی (درختان و کاشی‌های زمین) است، مورد ارزیابی قرار گرفت.
+}
+
+\field{تحلیل بصری و مقایسه الگوریتم‌ها}{
+با توجه به تصاویر خروجی این گام، نتایج زیر حاصل شد:
+\begin{itemize}
+    \item \textbf{الگوریتم \lr{FAST}:} این روش صرفاً آستانه روشنایی را بررسی می‌کند؛ به همین دلیل در مواجهه با بافت‌های شلوغ (مثل شاخ و برگ درختان و بندکشی کاشی‌ها)، هزاران نقطه متراکم و غیرمفید پیدا کرده است که باعث خطای شدید در تطبیق می‌شود.
+    \item \textbf{الگوریتم \lr{Harris}:} نقاط کمتری نسبت به \lr{FAST} پیدا کرده و بیشتر روی گوشه‌های قوی متمرکز است، اما در برابر تغییر مقیاس ضعیف عمل می‌کند.
+    \item \textbf{الگوریتم \lr{SIFT}:} برخلاف دو روش قبلی، توزیع بسیار منطقی‌تری دارد. دوایر رسم شده در تصویر خروجی نشان‌دهنده‌ی این است که \lr{SIFT} مقیاس و جهت هر ویژگی را نیز محاسبه می‌کند (\lr{Scale-Invariant}). این نقاط پایدارترین انتخاب برای ایجاد تصویر سراسرنما هستند.
+\end{itemize}
+}
+
+\field{تحلیل کد: پیاده‌سازی \lr{SIFT}}{
+با توجه به برتری \lr{SIFT}، کدهای کلیدی پیاده‌سازی آن به این شکل است:
+}
+
+\begin{codebox}[استخراج و رسم نقاط با SIFT]
+\begin{lstlisting}[language=Python]
+# Create a SIFT detector object
+sift = cv2.SIFT_create()
+
+# Detect keypoints on the grayscale image
+kp1_sift = sift.detect(img1_gray, None)
+
+# Draw keypoints on the RGB image 
+# DRAW_RICH_KEYPOINTS flag draws circles indicating scale and orientation
+img1_sift_drawn = cv2.drawKeypoints(
+    img1_rgb, kp1_sift, None, 
+    flags=cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS
+)
+\end{lstlisting}
+\end{codebox}
+\end{stepbox}
+
+\begin{figure}[h!]
+\centering
+\begin{subfigure}{0.46\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{images/Part_1/View1_SIFT.jpg}
+    \caption{توزیع هدفمند نقاط \lr{SIFT} با در نظر گرفتن مقیاس و جهت}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.46\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{images/Part_1/View1_FAST.jpg}
+    \caption{تراکم بیش از حد نقاط \lr{FAST} بر روی بافت‌های تکراری}
+\end{subfigure}
+\caption{مقایسه عملکرد الگوریتم‌ها بر روی مجموعه‌ی دوم (\lr{Set 2})}
+\end{figure}

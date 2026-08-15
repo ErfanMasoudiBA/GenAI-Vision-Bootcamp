@@ -1,0 +1,29 @@
+% ==========================================
+% فایل: steps/step00.tex
+% گام ۰: بارگذاری و پیش‌پردازش اولیه مجموعه‌ها
+% ==========================================
+
+\section{گام (۰): بارگذاری و آماده‌سازی تصاویر ورودی}
+
+\begin{stepbox}
+\field{هدف و روند کار}{
+در این تمرین به جای اجرای دستی کدها برای هر مجموعه تصویر (\lr{Set 1, 2, 3})، یک تابع جامع پایتون توسعه دادیم تا فرآیند خواندن، پردازش و ذخیره‌سازی را خودکار کند. در اولین قدم، تصاویر ورودی خوانده شده و برای نمایش صحیح و همچنین پردازش‌های بعدی، فضای رنگی آن‌ها اصلاح می‌شود.
+}
+
+\field{تحلیل کد: پیش‌پردازش فضای رنگی}{
+کتابخانه \lr{OpenCV} به صورت پیش‌فرض تصاویر را به جای استاندارد \lr{RGB}، در فضای \lr{BGR} می‌خواند. اگر این فضا اصلاح نشود، در زمان نمایش تصاویر با \lr{Matplotlib} دچار اعوجاج رنگی می‌شویم. کدهای کلیدی این بخش و منطق آن‌ها به شرح زیر است:
+}
+
+\begin{codebox}[بارگذاری و تغییر فضای رنگی]
+\begin{lstlisting}[language=Python]
+# Read image from path (default is BGR format)
+img1_bgr = cv2.imread(img1_path)
+
+# Convert BGR to RGB for correct plotting with matplotlib
+img1_rgb = cv2.cvtColor(img1_bgr, cv2.COLOR_BGR2RGB)
+
+# Convert to grayscale for feature extraction algorithms
+img1_gray = cv2.cvtColor(img1_bgr, cv2.COLOR_BGR2GRAY)
+\end{lstlisting}
+\end{codebox}
+\end{stepbox}

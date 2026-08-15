@@ -63,7 +63,7 @@ Thumbs.db
 *.dvi
 *.ps
 *.pdf
-
+*.mov
 # OS generated files
 .DS_Store
 Thumbs.db
@@ -75,3 +75,4 @@ Thumbs.db
 
 00_workshop/05_7_Mordad/MCI_Academy-20260805T155144Z-1-002/MCI_Academy/movie
 
+00_workshop/06_14_Mordad/HamrahAcademy-Detection-20260805T055135Z-1-001/HamrahAcademy-Detection/notebooks-data/tyre-2

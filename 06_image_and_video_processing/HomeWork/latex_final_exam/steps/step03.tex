@@ -1,0 +1,29 @@
+\section{پاسخ سوال ۳}
+\begin{stepbox}
+\field{فرمول کلی محاسبه Hue}{
+فرمول محاسبه زاویه Hue ($\theta$) بر اساس مولفه‌های RGB به صورت زیر است:
+\[ \theta = \cos^{-1}\left( \frac{\frac{1}{2}[(R-G)+(R-B)]}{\sqrt{(R-G)^2 + (R-B)(G-B)}} \right) \]
+اگر $B \le G$ باشد، $H = \theta$ و اگر $B > G$ باشد، $H = 360^\circ - \theta$.
+}
+
+\field{حالت اول: زمانی که $R = B$ باشد}{
+با جایگذاری در فرمول:
+\[ \theta = \cos^{-1}\left( \frac{\frac{1}{2}[(R-G)+0]}{\sqrt{(R-G)^2 + 0}} \right) = \cos^{-1}\left( \frac{1}{2} \frac{R-G}{|R-G|} \right) \]
+این مقدار کاملاً به میزان $G$ بستگی دارد.
+\begin{itemize}
+    \item اگر $R > G$ (در نتیجه $B > G$): عبارت داخل آرک‌کوسینوس برابر $+0.5$ می‌شود. پس $\theta = 60^\circ$. چون $B > G$ است، $H = 360^\circ - 60^\circ = \textbf{300}^\circ$ (رنگ سرخابی/Magenta).
+    \item اگر $R < G$ (در نتیجه $B < G$): عبارت داخل برابر $-0.5$ می‌شود. پس $\theta = 120^\circ$. چون $B < G$ است، $H = \textbf{120}^\circ$ (رنگ سبز/Green).
+    \item اگر $R = G = B$: تصویر خاکستری (Grayscale) است و Hue \textbf{تعریف‌نشده} (Undefined) می‌باشد.
+\end{itemize}
+}
+\newpage
+\field{حالت دوم: اگر مولفه‌های $G$ و $B$ برابر باشند ($G = B$)}{
+در این حالت فرمول به شکل زیر در می‌آید:
+\[ \theta = \cos^{-1}\left( \frac{\frac{1}{2}[(R-G)+(R-G)]}{\sqrt{(R-G)^2 + 0}} \right) = \cos^{-1}\left( \frac{R-G}{|R-G|} \right) \]
+از آنجایی که $G=B$ است، همواره شرط $B \le G$ صادق است و $H = \theta$.
+\begin{itemize}
+    \item اگر $R > G$: عبارت داخل آرک‌کوسینوس برابر $1$ می‌شود، پس $H = \textbf{0}^\circ$ (رنگ قرمز خالص).
+    \item اگر $R < G$: عبارت داخل آرک‌کوسینوس برابر $-1$ می‌شود، پس $H = \textbf{180}^\circ$ (رنگ فیروزه‌ای/Cyan).
+\end{itemize}
+}
+\end{stepbox}

@@ -1,0 +1,99 @@
+\section{کاهش رزولوشن با اعمال فیلتر \lr{Anti-aliasing}}
+
+در این بخش، قصد داریم پیش از انجام عملیات کاهش سایز، از یک فیلتر پایین‌گذر (Anti-aliasing) استفاده کنیم. هدف این است که فرکانس‌های بالای تصویر (که در بخش قبل باعث ایجاد پدیده مخرب الیاسینگ شدند) را پیش از نمونه‌برداری حذف کنیم تا بازسازی تصویر با کیفیت بهتری انجام شود.
+
+\subsection*{۱. تعریف فیلتر پایین‌گذر}
+ابتدا فیلتر یک‌بعدی مورد نظر را تعریف می‌کنیم:
+
+\begin{codebox}[\lr{Define Filter}]
+\begin{lstlisting}[language=Python]
+    kernel_1d = np.array([0.25, 0.5, 0.25])
+\end{lstlisting}
+\end{codebox}
+
+این آرایه یک فیلتر پایین‌گذر (\lr{Low-pass Filter}) بسیار ساده است. این فیلتر با میانگین‌گیری وزن‌دار از پیکسل‌ها، لبه‌های بسیار تیز (فرکانس‌های بالا) را نرم کرده و از ورود اطلاعات فرکانسی فراتر از حد نایکوئیست به فرآیند کوچک‌سازی جلوگیری می‌کند.
+
+\subsection*{۲. اعمال فیلتر و کاهش رزولوشن (نرخ ۴)}
+در این مرحله، فیلتر را روی تصویر اعمال کرده و سپس ابعاد آن را کوچک می‌کنیم:
+
+\begin{codebox}[\lr{Filtering and Downsampling - Rate 4}]
+\begin{lstlisting}[language=Python]
+    # اعمال فیلتر در دو راستای افقی و عمودی
+    filtered_img = cv2.sepFilter2D(img, -1, kernel_1d, kernel_1d)
+    
+    # کاهش ابعاد با نرخ ۴
+    down4_img = filtered_img[::4, ::4]
+\end{lstlisting}
+\end{codebox}
+
+به جای تعریف یک ماتریس دو‌بعدی بزرگ، از دستور \lr{\texttt{cv2.sepFilter2D}} استفاده شده است. این تابع، فیلتر یک‌بعدی ما را یک‌بار در راستای افقی و یک‌بار در راستای عمودی روی تصویر اعمال می‌کند که از نظر بار محاسباتی بسیار بهینه‌تر است. پس از مات شدن ملایم تصویر (\lr{filtered\_img})، با استفاده از قابلیت \lr{Slicing}، از هر ۴ پیکسل تنها یکی را نگه می‌داریم.
+
+\subsection*{۳. پردازش آبشاری برای رسیدن به نرخ ۱۶}
+برای کوچک‌سازی با نرخ ۱۶، پردازش را روی خروجی مرحله‌ی قبل ادامه می‌دهیم:
+
+\begin{codebox}[\lr{Cascaded Processing - Rate 16}]
+\begin{lstlisting}[language=Python]
+    # اعمال فیلتر روی تصویر نرخ ۴
+    filtered_down4 = cv2.sepFilter2D(down4_img, -1, kernel_1d, kernel_1d)
+    
+    # کاهش ابعاد مجدد برای رسیدن به نرخ ۱۶
+    down16_img = filtered_down4[::4, ::4]
+\end{lstlisting}
+\end{codebox}
+
+یک رویکرد هوشمندانه برای رسیدن به نرخ ۱۶، این است که به جای اعمال یک فیلتر بسیار بزرگ روی تصویر اصلی، تصویرِ فیلترشده در مرحله‌ی قبل (\lr{down4\_img}) را مجدداً از همان فیلتر عبور داده و دوباره با نرخ ۴ کوچک کنیم. این کار (\lr{Cascading}) هم نتیجه‌ی بهتری در حذف الیاسینگ دارد و هم سرعت پردازش را به شدت افزایش می‌دهد.
+
+\subsection*{۴. بازگرداندن ابعاد جهت بررسی خروجی}
+در نهایت، برای مشاهده نتیجه، تصاویر کوچک‌شده را بزرگ می‌کنیم (تنها بخشی از کد بازسازی به عنوان نمونه آورده شده است):
+
+\begin{codebox}[\lr{Upsampling}]
+\begin{lstlisting}[language=Python]
+    # بازسازی با روش دوخطی برای بررسی چشمی
+    up4_bl = cv2.resize(down4_img, (original_width, original_height), 
+                        interpolation=cv2.INTER_LINEAR)
+\end{lstlisting}
+\end{codebox}
+
+تابع \lr{\texttt{cv2.resize}} تصاویر کوچک‌شده را مجدداً به ابعاد \lr{original\_width} و \lr{original\_height} بازمی‌گرداند تا بتوانیم آن‌ها را مستقیماً با تصاویر اصلی و خروجی‌های بخش قبل مقایسه کنیم.
+
+\subsection*{نمایش خروجی‌ها (تصویر \lr{Ferris Wheel})}
+در شکل زیر، تأثیر اعمال فیلتر \lr{Anti-aliasing} بر تصویر چرخ‌وفلک پیش از کاهش ابعاد را مشاهده می‌کنید:
+
+\begin{figure}[h!]
+    \centering
+    \begin{subfigure}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/0_Rate4_Nearest.jpg}
+        \caption{نرخ ۴ - درونیابی نزدیک‌ترین همسایه}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/0_Rate4_Bilinear.jpg}
+        \caption{نرخ ۴ - درونیابی دوخطی}
+    \end{subfigure}
+    
+    \vspace{0.4cm}
+    
+    \begin{subfigure}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/0_Rate16_Nearest.jpg}
+        \caption{نرخ ۱۶ - درونیابی نزدیک‌ترین همسایه}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/0_Rate16_Bilinear.jpg}
+        \caption{نرخ ۱۶ - درونیابی دوخطی}
+    \end{subfigure}
+    \caption{تأثیر اعمال فیلتر \lr{Anti-aliasing} پیش از کوچک‌سازی تصویر چرخ‌وفلک}
+    \label{fig:part3_ferris_comparison}
+\end{figure}
+
+\subsection*{بررسی نهایی و تحلیل عملکرد فیلتر}
+با مقایسه این خروجی‌ها با نتایج بخش قبل، نکات مهم زیر استنتاج می‌شود:
+
+\begin{itemize}
+    \item \textbf{مهار پدیده الیاسینگ:} اعمال فیلتر `[0.25, 0.5, 0.25]` توانسته است فرکانس‌های بالا (مثل لبه‌های بسیار تیز میله‌های چرخ‌وفلک) را پیش از نمونه‌برداری نرم کند. در نتیجه، الگوهای مخرب و کاذب (\lr{Moiré Pattern}) که در مرحله‌ی قبل دیده می‌شدند، به شدت کاهش یافته‌اند.
+    \item \textbf{یکپارچگی ساختاری به بهای تاری تصویر:} فیلتر پایین‌گذر ذاتاً باعث ایجاد مقداری تاری (\lr{Blur}) در تصویر می‌شود. با این حال، در نرخ ۱۶ مشاهده می‌کنیم که برخلاف مرحله قبل که تصویر به لکه‌هایی بی‌معنی تبدیل شده بود، در اینجا فرم کلی و ساختار چرخ‌وفلک بهتر حفظ شده است و اعوجاج ساختاری کمتری به چشم می‌خورد.
+\end{itemize}

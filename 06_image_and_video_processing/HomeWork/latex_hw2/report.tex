@@ -1,0 +1,132 @@
+% ==========================================
+%            report.tex (فایل اصلی)
+%  قالب عمومی برای همه‌ی گزارش‌ها و تمرین‌های
+%  بوت‌کمپ هوش‌مصنوعی مولد (GenAI) — محور تصویر
+% ==========================================
+\documentclass[12pt, a4paper]{article}
+
+% فراخوانی استایل‌ها و پکیج‌ها
+\input{styles.tex}
+
+% ---------- متغیرهای قابل‌تغییر برای هر گزارش ----------
+% این سه خط را در ابتدای هر تمرین/گزارش جدید فقط عوض کنید
+\newcommand{\reportWeek}{گزارش‌کار تمرین هفته‌ی هفتم}
+\newcommand{\reportTitleFa}{دوره آفلاین پردازش تصویر و ویدئو}
+\newcommand{\reportCourse}{دوره آموزشی: پردازش تصویر و ویدئو (مقدماتی تا پیشرفته) — همراه اول آکادمی}
+\newcommand{\reportSubtitleFa}{تمرین دوم}
+\newcommand{\reportDate}{تاریخ گزارش: ۱۷ مرداد تا ۲۶ مرداد ۱۴۰۵}
+
+\begin{document}
+
+%----------------------------------------
+%          TITLE PAGE (صفحه جلد)
+%----------------------------------------
+\begin{titlepage}
+\newgeometry{left=2cm,right=2cm,top=0cm,bottom=1.5cm}
+
+\begin{tikzpicture}[remember picture,overlay]
+    \fill[MCIorange] ([xshift=-8cm]current page.north east) -- (current page.north east) -- ([yshift=-4cm]current page.north east) -- cycle;
+    \fill[MCIblue] ([xshift=-7.5cm]current page.north east) -- (current page.north east) -- ([yshift=-3.5cm]current page.north east) -- cycle;
+    \fill[MCIblue] (current page.south west) rectangle ([yshift=0.3cm]current page.south east);
+    \fill[MCIorange] (current page.south west) rectangle ([yshift=0.1cm]current page.south east);
+    % یک نشانه‌ی ظریف اضافه در گوشه‌ی پایین-چپ برای موازنه‌ی بصری
+    \fill[MCIblue!25] ([xshift=3.2cm,yshift=3.2cm]current page.south west) circle (1.1cm);
+\end{tikzpicture}
+
+\vspace*{1.2cm}
+\begin{center}
+    \begin{minipage}{0.9\textwidth}
+        \begin{flushleft}
+            \includegraphics[width=4.2cm]{logo.png}
+        \end{flushleft}
+    \end{minipage}
+\end{center}
+
+\vspace{2.2cm}
+
+\begin{center}
+    \setLTR
+    \textcolor{gray!80}{\large\reportWeek} \vspace{0.4cm}
+    \setRTL
+
+    \begin{minipage}{0.8\textwidth}
+        \centering
+        {\fontsize{26}{34}\selectfont\bfseries\color{MCIblue} \reportTitleFa}\\[0.3cm]
+        {\fontsize{26}{34}\selectfont\bfseries\color{primary} \reportSubtitleFa}
+    \end{minipage}
+
+    \vspace{0.6cm}
+    \textcolor{MCIorange}{\rule{8cm}{2pt}}
+    \vspace{0.6cm}
+
+    {\large\color{textgray} \reportCourse} \\[0.2cm]
+    {\large\color{textgray} \reportDate}
+
+    \vspace{1.5cm}
+    \begin{minipage}{0.6\textwidth}
+        \centering
+        \large
+        \faUser\ \textbf{مدرس:} جناب آقای آرش امینی \\[0.4cm]
+        \faUserGraduate\ \textbf{نگارنده:} سیدعرفان مسعودی
+    \end{minipage}
+\end{center}
+
+\vfill
+
+\begin{tcolorbox}[
+    enhanced,
+    colback=lightbg,
+    colframe=rulegray,
+    arc=3mm,
+    boxrule=0.5pt,
+    left=10pt, right=10pt, top=12pt, bottom=12pt
+]
+    \centering
+    \small
+    \begin{minipage}{0.46\textwidth}
+        \centering \faEnvelope\ \texttt{erfanmasoudiba@gmail.com}
+    \end{minipage}%
+    \begin{minipage}{0.46\textwidth}
+        \centering \faTelegram\ @erfanmasoudiba
+    \end{minipage}
+
+    \vspace{0.35cm}
+
+    \begin{minipage}{0.46\textwidth}
+        \centering \faGithub\ github.com/ErfanMasoudiBA
+    \end{minipage}%
+    \begin{minipage}{0.46\textwidth}
+        \centering \faLinkedin\ linkedin.com/in/erfan-masoudi
+    \end{minipage}
+\end{tcolorbox}
+
+\vspace{0.8cm}
+
+\end{titlepage}
+\restoregeometry
+%----------------------------------------
+
+% ---- صفحات مقدماتی: شماره‌گذاری رومی (i, ii, ...) ----
+\pagenumbering{roman}
+\newpage
+\tableofcontents
+\newpage
+
+% ---- از این‌جا بدنه‌ی اصلی شروع می‌شود: شماره‌گذاری عربی از ۱ ----
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% --- ایمپورت کردن گام‌ها به ترتیب ---
+% نکته: برای دیدن نمونه‌ی همه‌ی جعبه‌ها/رنگ‌ها/کد/معادله پیش از شروع کار جدید،
+% فایل steps/step00_template_guide.tex را نگاه کنید (اختیاری، قابل حذف در نسخه‌ی نهایی)
+\input{steps/step01.tex} 
+\clearpage
+\input{steps/step02.tex} 
+\clearpage
+\input{steps/step03.tex} 
+\clearpage
+\input{steps/step04.tex} 
+\clearpage
+\input{steps/step05.tex} 
+\clearpage
+\end{document}
